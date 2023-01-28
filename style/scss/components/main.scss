@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Dancing";
+    src: url('../../font/DancingScript-Bold.ttf');
+}
+.main{
+    margin-top: 30px;
+    @include flex-spaceBetween;
+    height: 35vw;
+}
+
+.main-item{
+    width: calc(34% - 15px);
+    height: 100%;
+    .main-item-top{
+        @include bg-img('main2.webp');
+        height: calc(50% - 15px);
+        margin-bottom: 30px;
+        padding: 10%;
+        h2{
+            font-size: 24px;
+            color: $colorGreen;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+
+    }
+    .main-item-bottom{
+        height: calc(50% - 15px);
+        @include bg-img('main3.webp');
+        @include flex-center(column);
+        h4{
+            font-size: 24px;
+            font-family: "Dancing";
+            color: $colorWhite;
+        }
+        h2{
+            color: #f4ed23;
+            font-size: 40px;
+            margin: 15px 0;
+        }
+        p{
+            color: $colorWhite;
+        }
+        .shop-button{
+            background-color: $colorGreenLight;
+            margin-top: 15px;
+            padding: 15px 25px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+        .shop-button:hover{
+            background-color: $colorWhite;
+        }
+        .shop-button a{
+            @include flex-center-vert;      
+            color: #fff;   
+            font-size: 12px;  
+            transition: .4s;
+        }
+        .shop-button:hover a{
+            color: $colorGreenLight;
+        }
+        .shop-button i{
+            font-size: 10px;
+            margin-left: 5px;
+            color: #fff;
+            transition: .4s;
+        }
+        .shop-button:hover i{
+            color: $colorGreenLight;
+            margin-left: 7px;
+        }
+    }
+}
+.main-slider{
+    width: calc(66% - 15px);
+    height: 100%;
+    .main-slider-item{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding: 100px;
+
+        h4{
+            font-family: "Dancing";
+            color: $colorGreenLight;
+            font-size: $fontSize + 10px;
+        }
+        h1{
+            color: $colorGreen;
+            font-size: 40px;
+            margin: 40px 0;
+        }
+
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}

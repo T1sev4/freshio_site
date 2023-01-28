@@ -1,0 +1,70 @@
+.header_menu{
+    @include flex-spaceBetween-center;
+    padding: 30px 0;
+}
+.header_search{
+    background-color: #f4f4f4;
+    width: 40%;
+    @include flex-center-vert;
+    padding: 10px 20px;
+    border-radius: 30px;
+    input{
+        width: 80%;
+        margin-left: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: $colorGreyLight;
+    }
+    input::placeholder{
+        color: $colorGreyLight;
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        color: $colorBlack;
+        font-weight: bold;
+    }
+    button:hover{
+        @include textHover;
+    }
+}
+.header_icons{
+    @include flex-center-vert;
+    div{
+        width: 44px;
+        height: 44px;
+        background-color: $colorBlueLight;
+        border-radius: 100%;
+        margin-left: 20px;
+        @include flex-center;
+        transition: .4s;
+        position: relative;
+    }
+    div:nth-child(2){
+        background-color: $colorCrem;
+    }
+    div:last-child{
+        background-color: $colorPink;
+    }
+    div:hover{
+        background-color: $colorGreenLight;
+    }
+    div:hover i{
+        color: #fff;
+    }
+    span{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background-color: #e0bf96;
+        @include flex-center;
+        border-radius: 100%;
+        color: #fff;
+    }
+}
+.header-adaptive{
+    display: none;
+}

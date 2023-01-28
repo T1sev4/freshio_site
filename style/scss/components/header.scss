@@ -1,0 +1,23 @@
+.header{
+    padding: 30px 5%;
+    @include flex-spaceBetween;
+}
+.header__item{
+    display: flex;
+
+    p{
+        font-size: $fontSize;
+        color: $colorBlack;
+    }
+
+    a{
+        margin-left: 20px;
+        font-size: $fontSize;
+        color: $colorGrey;
+        text-transform: uppercase;
+    }
+}
+
+.header__item a:hover{
+    @include textHover;
+}

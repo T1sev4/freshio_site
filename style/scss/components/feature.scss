@@ -1,0 +1,112 @@
+.feature-main{
+    margin-top: 100px;
+}
+.feature-header{
+    @include flex-spaceBetween-center;
+    position: relative;
+    h2{
+        font-size: 30px;
+        color: $colorGreen;
+    }
+    .feature-link{
+        border-color: $colorGreenLight;
+        a{
+            color: $colorGreenLight;
+        }
+    }
+}
+
+.feature-header h2::before{
+    @include pseudo;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $colorGreenLight;
+    border-radius: 100%;
+    left: -30px;
+    top: 3px;
+}
+
+.seller-header h2::before{
+    border: 2px solid red;
+}
+
+.feature{
+    @include flex-spaceBetween;
+    margin-top: 30px;
+    .feature-item{
+        width: calc(25% - 30px);
+        @include flex-center(column);
+        padding: 40px 30px;
+        text-align: center;
+        border: 1px solid #e1e1e1;
+        border-radius: 30px;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .feature-item--link1{
+            margin-top: 50px;
+            color: $colorGreenLight;
+        }
+        .feature-item--link2{
+            font-size: $fontSize;
+            color: $colorBlack;
+            margin: 15px 0;
+        }
+        .feature-item--link2:hover{
+            @include textHover;
+        }
+        h3{
+            color: #e0bf96;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .feature-line{
+            width: 80px;
+            height: 2px;
+            background-color: $colorGreenLight;
+            margin: 20px 0;
+        }
+        .feature-link-dop{
+            border: none;
+            text-transform: uppercase;
+            font-family: "Roboto-bold";
+        }
+        &:hover .feature-line{
+            width: 120px;
+            transition: .4s;
+        }
+        &:hover .feature-hidden{
+            top: 45%;
+            opacity: 1;
+        }
+        
+    }
+
+}
+
+.feature-hidden{
+    display: flex;
+    position: absolute;
+    top: 60%;
+    opacity: 0;
+    transition: .4s;
+    div{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #e1e1e1;
+        border-radius: 50%;
+        @include flex-center;
+        margin: 0 5px;
+        transition: .4s;
+        &:hover{
+            background-color: $colorGreen;
+        }
+        &:hover img{
+            filter: invert(1);
+        }
+    }
+    img{
+        transition: .4s;
+    }
+}

@@ -1,0 +1,31 @@
+.nav, .nav_left, .nav-right{
+    @include flex-center-vert
+}
+.nav{
+    background-color: $colorGreen;
+    padding: 20px;
+    color: $colorWhite;
+    a{
+        color: $colorWhite;
+        margin-right: 20px;
+        font-size: $fontSize;
+        font-family: "Roboto-bold";
+        text-transform: capitalize;
+    }
+    a:hover{
+        @include textHover;
+    }
+}
+.nav_left{
+    margin-right: 20px;
+    i{
+        margin-right: 20px;
+    }
+    p{
+        font-family: "Roboto-light";
+    }
+}
+.nav-right{
+    border-left: 1px solid #e1e1e1;
+    padding-left: 50px;
+}

@@ -1,0 +1,48 @@
+.footer{
+    margin-top: 50px;
+    @include flex-spaceBetween;
+    flex-wrap: wrap;
+}
+.footer-item{
+    width: calc(20% - 30px);
+    a{
+        display: block;
+        color: $colorGreyLight;
+        font-family: "Roboto-light";
+        margin-bottom: 15px;
+        transition: .4s;
+        &:hover{
+            color: $colorGreenLight;
+
+        }
+    }
+    h2{
+        font-size: 14px;
+        font-family: "Roboto-bold";
+        margin-bottom: 30px;
+    }
+    h3{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    p{
+        color: $colorGreenLight;
+        font-size: 18px;
+    }
+    img{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+}
+.footer-dop{
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 50px;
+    color: $colorGrey;
+    font-size: 18px;
+    span{
+        color: $colorGreenLight;
+    }
+}

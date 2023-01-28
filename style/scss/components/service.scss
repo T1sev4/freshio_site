@@ -1,0 +1,37 @@
+.service{
+    // margin-top: 30px;
+    display: flex;
+}
+.service-item{
+    width: 25%;
+    @include flex-center-vert;
+    padding: 60px 20px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+    img{
+        margin-right: 20px;
+    }
+    h3{
+        color: $colorGreen;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 14px;
+        color: $colorGrey;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
+.service-item::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: $colorGreen;
+    transition: .6s;
+    
+}

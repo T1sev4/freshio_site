@@ -1,0 +1,75 @@
+// absolute
+@mixin abs-position ($top, $right, $bottom, $left) {
+    position: absolute; 
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// flex
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center($direction: row) {
+    @if $direction == column{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }@else{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@mixin flex-spaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin flex-spaceBetween-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+//pseudo
+@mixin pseudo($pos: absolute, $content: ''){
+    content: $content;
+    position: $pos;
+}
+//hover
+@mixin textHover{
+    color: $colorGreenLight;
+    transition: .4s;
+}
+//bg-img
+@mixin bg-img($img){
+    background-image: url('../../img/#{$img}');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//grid
+@mixin grid($rows, $gap){
+    display: grid;
+    grid-auto-rows: $rows;
+    gap: $gap;
+}
+@mixin grid-position($colStart, $colEnd, $rowStart, $rowEnd){
+    grid-column-start: $colStart;
+    grid-column-end: $colEnd;
+    grid-row-start: $rowStart;
+    grid-row-end: $rowEnd;
+}

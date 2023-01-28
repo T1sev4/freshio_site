@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Roboto-bold";
+    src: url('../../font/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: "Roboto-light";
+    src: url('../../font/Roboto-Light.ttf');
+}
+body{
+    background-color: #fdf4ea;
+    background-image: url('../../img/back_body.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 0 5%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    background-color: $colorWhite;
+    padding: 0 5%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+.shop-link{
+    border-bottom: 3px solid $colorBlack;
+    padding-bottom: 5px;
+    width: fit-content;
+    transition: .4s;
+    &:hover{
+        border-color: $colorGreenLight;
+    }
+    &:hover a{
+        @include textHover;        
+    }
+    &:hover i{
+        @include textHover;
+        margin-left: 7px;
+    }
+    a{
+        @include flex-center-vert;
+        color: $colorBlack;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    i{
+        font-size: 10px;
+        margin-left: 5px;
+    }
+}
+.shop-green{
+    border-color: $colorGreenLight;
+}
+.shop-green a{
+    color: $colorGreenLight;
+}

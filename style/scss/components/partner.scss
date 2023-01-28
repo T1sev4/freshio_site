@@ -1,0 +1,13 @@
+.partner{
+    @include flex-spaceBetween;
+    padding-top: 40px;
+    border-top: 1px solid #e1e1e1;
+}
+.partner img{
+    width: calc((100% / 6) - 40px);
+    opacity: .5;
+    transition: .4s;
+    &:hover{
+        opacity: 1;
+    }
+}
